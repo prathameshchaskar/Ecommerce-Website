@@ -1,18 +1,13 @@
-"use client";
 
 import { useEffect, useState } from "react";
-import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { Box, Grid, LinearProgress, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
-import { mens_kurta } from "../../../data/mens-kurta";
-import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { findProductById } from "../../../Redux/Customers/Product/Action";
 import { addItemToCart } from "../../../Redux/Customers/Cart/Action";
 import { getAllReviews } from "../../../Redux/Customers/Review/Action";
-import { gounsPage1 } from "../../../data/Gouns/gouns";
  
 
 const product = {
