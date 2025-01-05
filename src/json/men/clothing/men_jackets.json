@@ -1,0 +1,482 @@
+[
+    {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/p/h/k/l-1-no-bmwj011000-9-dollar-original-imah65hwxgpbsd2s.jpeg?q=70&crop=false",
+        "brand": "Dollar",
+        "title": "Men Solid Bomber Jacket",
+        "color": "black",
+        "discountedPrice": 999,
+        "price": 3000,
+        "discountPersent": 67,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Bomber Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/u/e/a/s-1-no-bmwj011000-9-dollar-original-imah65hwrgegwthx.jpeg?q=70&crop=false",
+        "brand": "Dollar",
+        "title": "Men Solid Bomber Jacket",
+        "color": "green",
+        "discountedPrice": 999,
+        "price": 3000,
+        "discountPersent": 67,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Bomber Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/0/t/m/m-1-no-udjcks1461-u-s-polo-assn-denim-co-original-imah7yzygrsqmxmd.jpeg?q=70&crop=false",
+        "brand": "U.S. Polo Assn. Denim Co.",
+        "title": "Men Solid Puffer Jacket",
+        "color": "blue",
+        "discountedPrice": 999,
+        "price": 3000,
+        "discountPersent": 67,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Puffer Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/y/c/a/-original-imaguzjrhf7g4mcy.jpeg?q=70&crop=false",
+        "brand": "The Indian Garage Co.",
+        "title": "Men Colorblock Padded Jacket",
+        "color": "red",
+        "discountedPrice": 1137,
+        "price": 4549,
+        "discountPersent": 75,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Colorblock Padded Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/h/d/p/-original-imaguzjrpquhhzzw.jpeg?q=70&crop=false",
+        "brand": "The Indian Garage Co.",
+        "title": "Men Colorblock Padded Jacket",
+        "color": "yellow",
+        "discountedPrice": 1137,
+        "price": 4549,
+        "discountPersent": 75,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Colorblock Padded Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/0/i/l/m-1-no-usjcks0698-u-s-polo-assn-original-imah6k9v4qzgz7ff.jpeg?q=70&crop=false",
+        "brand": "U.S. POLO ASSN.",
+        "title": "Men Solid Casual Jacket",
+        "color": "white",
+        "discountedPrice": 3289,
+        "price": 6999,
+        "discountPersent": 53,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Casual Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/kj8wccw0-0/jacket/y/g/8/xxl-12645820-here-now-original-imafyurmdnnj5wby.jpeg?q=70&crop=false",
+        "brand": "HERE&NOW",
+        "title": "Men Solid Bomber Jacket",
+        "color": "white",
+        "discountedPrice": 1406,
+        "price": 3799,
+        "discountPersent": 62,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Bomber Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/f/t/d/m-1-yes-bd407m-fort-collins-original-imah7farhqyrbzmz.jpeg?q=70&crop=false",
+        "brand": "Fort Collins",
+        "title": "Men Solid Casual Jacket",
+        "color": "black",
+        "discountedPrice": 936,
+        "price": 2465,
+        "discountPersent": 62,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Casual Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/416/416/xif0q/jacket/x/n/s/xxl-no-vm-1551425-3390-v-mart-original-imah5nyx2zxhwndk.jpeg?q=70&crop=false",
+        "brand": "V-MART",
+        "title": "Men Solid Bomber Jacket",
+        "color": "green",
+        "discountedPrice": 949,
+        "price": 999,
+        "discountPersent": 5,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Bomber Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/y/1/2/xl-no-win23-csmawjk060tn-campus-sutra-original-imagsjtamfhzwdzw.jpeg?q=70&crop=false",
+        "brand": "CAMPUS SUTRA",
+        "title": "Men Solid Casual Jacket",
+        "color": "brown",
+        "discountedPrice": 1049,
+        "price": 3499,
+        "discountPersent": 70,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Casual Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/9/v/q/m-1-no-0222-jkt52-08-the-indian-garage-co-original-imagpxa3fyffw43g.jpeg?q=70&crop=false",
+        "brand": "The Indian Garage Co.",
+        "title": "Men Solid Casual Jacket",
+        "color": "white",
+        "discountedPrice": 1369,
+        "price": 4149,
+        "discountPersent": 67,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Casual Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/416/416/xif0q/jacket/s/g/w/s-no-mens-jacket-481-white-christy-world-original-imah2xf27xxsr2ua.jpeg?q=70&crop=false",
+        "brand": "Christy World",
+        "title": "Men Solid Cape Jacket",
+        "color": "white",
+        "discountedPrice": 499,
+        "price": 1999,
+        "discountPersent": 75,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Cape Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/z/m/v/28-no-mens-jacket-481-mustard-christy-world-original-imagg45j4hyvkmgn.jpeg?q=70&crop=false",
+        "brand": "Christy World",
+        "title": "Men Solid Cape Jacket",
+        "color": "yellow",
+        "discountedPrice": 499,
+        "price": 1999,
+        "discountPersent": 75,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Cape Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/2/2/e/l-no-mens-jacket-481-blue-christy-world-original-imagg45jwczwkqy7.jpeg?q=70&crop=false",
+        "brand": "Christy World",
+        "title": "Men Solid Cape Jacket",
+        "color": "blue",
+        "discountedPrice": 499,
+        "price": 1999,
+        "discountPersent": 75,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Cape Jacket"
+      },
+      {
+        "imageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/jacket/w/d/v/l-no-mens-jacket-481-black-christy-world-original-imagg45jje2zhhgu.jpeg?q=70&crop=false",
+        "brand": "Christy World",
+        "title": "Men Solid Cape Jacket",
+        "color": "black",
+        "discountedPrice": 475,
+        "price": 1999,
+        "discountPersent": 76,
+        "size": [
+          {
+            "name": "S",
+            "quantity": 20
+          },
+          {
+            "name": "M",
+            "quantity": 20
+          },
+          {
+            "name": "L",
+            "quantity": 30
+          },
+          {
+            "name": "XL",
+            "quantity": 30
+          }
+        ],
+        "quantity": 100,
+        "topLevelCategory": "Men",
+        "secondLevelCategory": "Clothing",
+        "thirdLevelCategory": "men_jackets",
+        "description": "Men Solid Cape Jacket"
+      }
+]

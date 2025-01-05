@@ -1,0 +1,12 @@
+/* .productCard {
+    border-radius: 10px ;
+} */
+
+.productCard:hover .textPart {
+  transform: translateY(-1rem);
+}
+
+.productCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
