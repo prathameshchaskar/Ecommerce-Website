@@ -5,7 +5,7 @@ import { Alert, AlertTitle, Box, Grid } from "@mui/material";
 import { getOrderById } from "../../../Redux/Customers/Order/Action";
 import { useParams } from "react-router-dom";
 import AddressCard from "../AddressCard/AddressCard";
-import OrderTraker from "../orders/OrderTraker";
+import OrderTraker from "../Orders/OrderTraker";
 
 const PaymentSuccess = () => {
   // razorpay_payment_link_reference_id
