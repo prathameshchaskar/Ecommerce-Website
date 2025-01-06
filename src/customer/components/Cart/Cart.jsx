@@ -11,8 +11,12 @@ const Cart = () => {
   const jwt = localStorage.getItem("jwt");
   const { cart } = useSelector((store) => store);
   console.log("cart ", cart);
+  
 
   useEffect(() => {
+    // Reload the page every time the component is mounted
+    window.location.reload();
+    
     dispatch(getCart(jwt));
   }, [jwt, dispatch]);
 
