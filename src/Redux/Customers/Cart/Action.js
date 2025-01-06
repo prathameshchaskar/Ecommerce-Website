@@ -36,6 +36,10 @@ export const addItemToCart = (reqData) => async (dispatch) => {
       type: ADD_ITEM_TO_CART_SUCCESS,
       payload: data,
     });
+
+     // Fetch the updated cart data
+     dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
+     
   } catch (error) {
     dispatch({
       type: ADD_ITEM_TO_CART_FAILURE,

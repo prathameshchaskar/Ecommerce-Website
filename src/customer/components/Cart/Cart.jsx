@@ -14,11 +14,8 @@ const Cart = () => {
   
 
   useEffect(() => {
-    // Reload the page every time the component is mounted
-    window.location.reload();
-    
     dispatch(getCart(jwt));
-  }, [jwt, dispatch]);
+  }, [jwt, dispatch, cart]);
 
   const handleCheckout = () => {
     navigate("/checkout?step=2");
