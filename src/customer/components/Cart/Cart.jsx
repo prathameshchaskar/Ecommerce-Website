@@ -13,12 +13,17 @@ const Cart = () => {
   console.log("cart ", cart);
 
   useEffect(() => {
-    console.log("Updated cart items: ", cart.cartItems);
-  }, [cart.cartItems]); // This ensures the component re-renders when cartItems changes
-
+    if (jwt) {
+      console.log("Fetching cart items...");
+      dispatch(getCart(jwt)); // Fetch the cart items when jwt is available
+    }
+  }, [jwt, dispatch]);  // Ensure it's called when jwt changes
+  
   useEffect(() => {
-    dispatch(getCart(jwt));
-  }, [jwt, dispatch]);
+    if (cart.cartItems && cart.cartItems.length > 0) {
+      console.log("Updated cart items: ", cart.cartItems);
+    }
+  }, [cart.cartItems]); // This should re-render when cartItems change
 
   const handleCheckout = () => {
     navigate("/checkout?step=2");

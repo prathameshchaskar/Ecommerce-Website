@@ -62,6 +62,7 @@ const cartReducer = (state = initialState, action) => {
         loading: true,
       };
     case GET_CART_SUCCESS:
+      console.log('Cart data in reducer:', action.payload.cartItems); // Debugging log
       const fetchedCartData = calculateTotalPrice(action.payload.cartItems);
       return {
         ...state,
