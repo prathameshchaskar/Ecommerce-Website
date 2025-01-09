@@ -77,19 +77,11 @@ export default function ProductDetails() {
     setActiveImage(image);
   };
 
-  const handleSubmit = () => {
+  const handleAddToCart = () => {
     const data = { productId, size: selectedSize.name };
-    dispatch(addItemToCart({ data, jwt }))
-      .then(() => {
-        navigate("/cart");  // Navigate after adding to the cart
-      });
+    dispatch(addItemToCart({ data, jwt }));
+    navigate("/cart");
   };
-
-  // const handleAddToCart = () => {
-  //   const data = { productId, size: selectedSize.name };
-  //   dispatch(addItemToCart({ data, jwt }));
-  //   navigate("/cart");
-  // };
 
   useEffect(() => {
     const data = { productId: Number(productId), jwt };
@@ -202,7 +194,7 @@ export default function ProductDetails() {
                 </div>
               </div>
 
-              <form className="mt-10" onSubmit={handleSubmit}>
+              <form className="mt-10" >
                 {/* Sizes */}
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
@@ -262,8 +254,8 @@ export default function ProductDetails() {
                 </div>
 
                 <button
-                 
-                  type="submit"
+                 onClick={handleAddToCart}
+                  
                   className="mt-10 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Add to Cart
