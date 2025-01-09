@@ -71,6 +71,7 @@ export const getCart = (jwt) => async (dispatch) => {
       type: GET_CART_SUCCESS,
       payload: data,
     });
+    console.log("get cart is dispatched");
   } catch (error) {
     dispatch({
       type: GET_CART_FAILURE, 

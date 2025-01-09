@@ -11,16 +11,14 @@ const Cart = () => {
   const jwt = localStorage.getItem("jwt");
   const { cart } = useSelector((store) => store);
   console.log("cart ", cart);
-  
 
   useEffect(() => {
     console.log("Updated cart items: ", cart.cartItems);
   }, [cart.cartItems]); // This ensures the component re-renders when cartItems changes
-  
 
   useEffect(() => {
     dispatch(getCart(jwt));
-  }, [jwt,dispatch]);
+  }, [jwt, dispatch]);
 
   const handleCheckout = () => {
     navigate("/checkout?step=2");
@@ -28,7 +26,7 @@ const Cart = () => {
 
   return (
     <div>
-      {cart.cartItems.length > 0 && (
+      {cart.cartItems.length > 0 ? (
         <div className="lg:grid grid-cols-3 lg:px-16 relative">
           <div className="lg:col-span-2 lg:px-5 bg-white">
             <div className="space-y-3">
@@ -74,6 +72,8 @@ const Cart = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <p>Your cart is empty</p>
       )}
     </div>
   );
