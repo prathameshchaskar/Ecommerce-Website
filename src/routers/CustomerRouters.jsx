@@ -42,7 +42,7 @@ const CustomerRouters = () => {
             path="/account/rate/:productId"
             element={<RateProduct />}
           ></Route>
-          <Route path="/payments/:orderId" element={<PaymentSuccess />}></Route>
+          <Route path="/payment/:orderId" element={<PaymentSuccess />}></Route>
         </Routes>
       </div>
       <div>
