@@ -6,7 +6,7 @@ import ProductReviewCard from "./ProductReviewCard";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { findProductById } from "../../../Redux/Customers/Product/Action";
-import { addItemToCart } from "../../../Redux/Customers/Cart/Action";
+import { addItemToCart, getCart } from "../../../Redux/Customers/Cart/Action";
 import { getAllReviews } from "../../../Redux/Customers/Review/Action";
  
 
@@ -77,8 +77,7 @@ export default function ProductDetails() {
     setActiveImage(image);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     const data = { productId, size: selectedSize.name };
     dispatch(addItemToCart({ data, jwt }))
     .then(() => {
