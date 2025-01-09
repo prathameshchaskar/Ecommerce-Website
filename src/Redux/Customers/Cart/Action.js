@@ -34,7 +34,7 @@ export const addItemToCart = (reqData) => async (dispatch) => {
     console.log("add item to cart ", data);
     dispatch({
       type: ADD_ITEM_TO_CART_SUCCESS,
-      payload: data,
+      payload: data.cartItems,
     });
 
      // Fetch the updated cart data

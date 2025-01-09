@@ -46,7 +46,7 @@ const cartReducer = (state = initialState, action) => {
     case ADD_ITEM_TO_CART_REQUEST:
       return { ...state, loading: true, error: null };
     case ADD_ITEM_TO_CART_SUCCESS:
-      const addedCartItems = [...state.cartItems, action.payload.cartItems];
+      const addedCartItems = [...state.cartItems, ...ADD_ITEM_TO_CART_SUCCESSaction.payload];
       const newCartData = calculateTotalPrice(addedCartItems);
       return {
         ...state,
