@@ -77,10 +77,15 @@ export default function ProductDetails() {
     setActiveImage(image);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const data = { productId, size: selectedSize.name };
-    dispatch(addItemToCart({ data, jwt }));
-    navigate("/cart");
+    dispatch(addItemToCart({ data, jwt }))
+    .then(() => {
+      // After the item is added, fetch the updated cart and then navigate
+      dispatch(getCart(jwt))
+        .then(() => navigate("/cart"));
+    });
   };
 
   // const handleAddToCart = () => {

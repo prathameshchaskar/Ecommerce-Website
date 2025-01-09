@@ -34,11 +34,13 @@ export const addItemToCart = (reqData) => async (dispatch) => {
     console.log("add item to cart ", data);
     dispatch({
       type: ADD_ITEM_TO_CART_SUCCESS,
-      payload: data.cartItems,
+      payload: data,
     });
 
+    // Debugging log to confirm that getCart is being called
+    console.log('Fetching updated cart after adding item');
      // Fetch the updated cart data
-     dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
+     await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
      
   } catch (error) {
     dispatch({
@@ -67,7 +69,7 @@ export const getCart = (jwt) => async (dispatch) => {
     });
   } catch (error) {
     dispatch({
-      type: GET_CART_FAILURE,
+      type: GET_CART_FAILURE, 
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
