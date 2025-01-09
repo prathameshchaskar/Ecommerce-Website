@@ -15,11 +15,11 @@ import {
   UPDATE_CART_ITEM_REQUEST,
   UPDATE_CART_ITEM_SUCCESS,
 } from "./ActionType";
-import { useNavigate } from "react-router-dom";
+
 
 
 export const addItemToCart = (reqData) => async (dispatch) => {
-  const navigate = useNavigate();
+  
   console.log("addItemToCart triggered", reqData);
   try {
     dispatch({ type: ADD_ITEM_TO_CART_REQUEST });
@@ -45,7 +45,6 @@ export const addItemToCart = (reqData) => async (dispatch) => {
     await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
     console.log('getCart dispatched');
     console.log('Navigating to the cart page');
-    navigate("/cart");  // Now navigate only after the cart is updated
      
   } catch (error) {
     dispatch({
