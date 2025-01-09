@@ -80,11 +80,9 @@ export default function ProductDetails() {
   const handleSubmit = () => {
     const data = { productId, size: selectedSize.name };
     dispatch(addItemToCart({ data, jwt }))
-    .then(() => {
-      // After the item is added, fetch the updated cart and then navigate
-      dispatch(getCart(jwt))
-        .then(() => navigate("/cart"));
-    });
+      .then(() => {
+        navigate("/cart");  // Navigate after adding to the cart
+      });
   };
 
   // const handleAddToCart = () => {

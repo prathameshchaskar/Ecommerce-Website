@@ -15,8 +15,11 @@ import {
   UPDATE_CART_ITEM_REQUEST,
   UPDATE_CART_ITEM_SUCCESS,
 } from "./ActionType";
+import { useNavigate } from "react-router-dom";
+
 
 export const addItemToCart = (reqData) => async (dispatch) => {
+  const navigate = useNavigate();
   console.log("req data ", reqData);
   try {
     dispatch({ type: ADD_ITEM_TO_CART_REQUEST });
@@ -37,10 +40,12 @@ export const addItemToCart = (reqData) => async (dispatch) => {
       payload: data,
     });
 
-    // Debugging log to confirm that getCart is being called
-    console.log('Fetching updated cart after adding item');
-     // Fetch the updated cart data
-     await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
+    // Debugging log to confirm the action dispatch
+    console.log('Item added to cart, now dispatching getCart');
+    await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
+    console.log('getCart dispatched');
+    console.log('Navigating to the cart page');
+    navigate("/cart");  // Now navigate only after the cart is updated
      
   } catch (error) {
     dispatch({
@@ -62,7 +67,7 @@ export const getCart = (jwt) => async (dispatch) => {
       },
     };
     const { data } = await axios.get(`${API_BASE_URL}/api/cart/`, config);
-    console.log("cart ", data);
+    console.log('Cart data fetched: ', data);
     dispatch({
       type: GET_CART_SUCCESS,
       payload: data,
