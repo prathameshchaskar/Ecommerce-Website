@@ -14,6 +14,11 @@ const Cart = () => {
   
 
   useEffect(() => {
+    console.log("Updated cart items: ", cart.cartItems);
+  }, [cart.cartItems]); // This ensures the component re-renders when cartItems changes
+  
+
+  useEffect(() => {
     dispatch(getCart(jwt));
   }, [jwt,dispatch]);
 
