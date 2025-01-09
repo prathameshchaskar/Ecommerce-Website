@@ -9,7 +9,7 @@ import { IconButton } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, showButton }) => {
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
 
@@ -52,6 +52,7 @@ const CartItem = ({ item }) => {
           </div>
         </div>
       </div>
+      {showButton && (
       <div className="lg:flex items-center lg:space-x-10 pt-4">
         <div className="flex items-center space-x-2">
           <IconButton
@@ -79,6 +80,7 @@ const CartItem = ({ item }) => {
           </Button>
         </div>
       </div>
+      )}
     </div>
   );
 };

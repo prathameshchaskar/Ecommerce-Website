@@ -15,7 +15,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(getCart(jwt));
-  }, [jwt, dispatch, cart]);
+  }, [jwt,dispatch]);
 
   const handleCheckout = () => {
     navigate("/checkout?step=2");
@@ -28,7 +28,7 @@ const Cart = () => {
           <div className="lg:col-span-2 lg:px-5 bg-white">
             <div className="space-y-3">
               {cart.cartItems.map((item) => (
-                <CartItem key={item.id} item={item} />
+                <CartItem item={item} showButton={true} />
               ))}
             </div>
           </div>
