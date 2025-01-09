@@ -6,7 +6,7 @@ import ProductReviewCard from "./ProductReviewCard";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { findProductById } from "../../../Redux/Customers/Product/Action";
-import { addItemToCart, getCart } from "../../../Redux/Customers/Cart/Action";
+import { addItemToCart } from "../../../Redux/Customers/Cart/Action";
 import { getAllReviews } from "../../../Redux/Customers/Review/Action";
  
 

@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 
 export const addItemToCart = (reqData) => async (dispatch) => {
   const navigate = useNavigate();
-  console.log("req data ", reqData);
+  console.log("addItemToCart triggered", reqData);
   try {
     dispatch({ type: ADD_ITEM_TO_CART_REQUEST });
     const config = {
@@ -41,7 +41,7 @@ export const addItemToCart = (reqData) => async (dispatch) => {
     });
 
     // Debugging log to confirm the action dispatch
-    console.log('Item added to cart, now dispatching getCart');
+    console.log('Item added to cart, now fetching updated cart...');
     await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
     console.log('getCart dispatched');
     console.log('Navigating to the cart page');
