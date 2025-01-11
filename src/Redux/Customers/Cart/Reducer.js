@@ -56,7 +56,7 @@ const cartReducer = (state = initialState, action) => {
       };
       
     case ADD_ITEM_TO_CART_SUCCESS:
-      const updatedCartItemsAfterAdd = [...state.cartItems, action.payload.item]; // Assuming `item` is the added item
+      const updatedCartItemsAfterAdd = [...state.cartItems, action.payload.cartItems]; 
       const updatedCartDataAfterAdd = calculateTotalPrice(updatedCartItemsAfterAdd);
       return {
         ...state,
