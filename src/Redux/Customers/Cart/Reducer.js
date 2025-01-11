@@ -21,6 +21,16 @@ const initialState = {
 };
 
 const calculateTotalPrice = (cartItems) => {
+  // Ensure cartItems is defined and is an array
+  if (!Array.isArray(cartItems)) {
+    return {
+      totalPrice: 0,
+      totalDiscountedPrice: 0,
+      discount: 0,
+      totalItem: 0,
+    };
+  }
+  
   let totalPrice = 0;
   let totalDiscountedPrice = 0;
   let totalItem = cartItems.length;
