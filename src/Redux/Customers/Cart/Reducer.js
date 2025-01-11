@@ -26,8 +26,10 @@ const calculateTotalPrice = (cartItems) => {
   let totalItem = cartItems.length;
 
   cartItems.forEach((item) => {
+    if (item.product) {
     totalPrice += item.product.price * item.quantity;
     totalDiscountedPrice += item.product.discountedPrice * item.quantity; // Assuming discountedPrice exists
+    }
   });
 
   // Calculate discount
@@ -64,6 +66,7 @@ const cartReducer = (state = initialState, action) => {
       };
 
     case GET_CART_SUCCESS:
+      console.log("Cart Data:", action.payload.cartItems);  // Log to verify
       const fetchedCartData  = calculateTotalPrice(action.payload.cartItems);
       return {
         ...state,
