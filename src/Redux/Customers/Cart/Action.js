@@ -40,11 +40,13 @@ export const addItemToCart = (reqData) => async (dispatch) => {
       payload: data,
     });
 
-    // Debugging log to confirm the action dispatch
-    console.log('Item added to cart, now fetching updated cart...');
-    await dispatch(getCart(reqData.jwt)); // Refetch the cart after adding the item
-    console.log('getCart dispatched');
-    console.log('Navigating to the cart page');
+    // Fetch updated cart
+    console.log("Item added to cart, now fetching updated cart...");
+    const cartData = await dispatch(getCart(reqData.jwt)); // Wait for cart to be fetched
+    console.log("getCart dispatched and completed", cartData);
+
+    // Navigate to cart after ensuring the state is updated
+    dispatch(() => navigate("/cart"));
      
   } catch (error) {
     dispatch({

@@ -15,15 +15,13 @@ const Cart = () => {
   useEffect(() => {
     if (jwt) {
       console.log("Fetching cart items...");
-      dispatch(getCart(jwt)); // Fetch the cart items when jwt is available
+      dispatch(getCart(jwt));
     }
-  }, [jwt, dispatch]);  // Ensure it's called when jwt changes
-  
+  }, [jwt, dispatch]);
+
   useEffect(() => {
-    if (cart.cartItems && cart.cartItems.length > 0) {
-      console.log("Updated cart items: ", cart.cartItems);
-    }
-  }, [cart.cartItems]); // This should re-render when cartItems change
+    console.log("Cart state after fetch:", cart);
+  }, [cart]);
 
   const handleCheckout = () => {
     navigate("/checkout?step=2");
@@ -31,12 +29,12 @@ const Cart = () => {
 
   return (
     <div>
-      {cart.cartItems.length > 0 ? (
+      {cart.cartItems && cart.cartItems.length > 0 ? (
         <div className="lg:grid grid-cols-3 lg:px-16 relative">
           <div className="lg:col-span-2 lg:px-5 bg-white">
             <div className="space-y-3">
               {cart.cartItems.map((item) => (
-                <CartItem item={item} showButton={true} />
+                <CartItem key={item.id} item={item} showButton={true} />
               ))}
             </div>
           </div>
