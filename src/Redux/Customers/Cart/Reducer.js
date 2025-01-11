@@ -26,13 +26,12 @@ const calculateTotalPrice = (cartItems) => {
   let totalItem = cartItems.length;
 
   cartItems.forEach((item) => {
-    if (item.product) {
-    totalPrice += item.product.price * item.quantity;
-    totalDiscountedPrice += item.product.discountedPrice * item.quantity; // Assuming discountedPrice exists
+    if (item.product && item.product.price && item.product.discountedPrice) {
+      totalPrice += item.product.price * item.quantity;
+      totalDiscountedPrice += item.product.discountedPrice * item.quantity;
     }
   });
 
-  // Calculate discount
   let discount = totalPrice - totalDiscountedPrice;
 
   return {
@@ -56,18 +55,8 @@ const cartReducer = (state = initialState, action) => {
       };
       
     case ADD_ITEM_TO_CART_SUCCESS:
-      const updatedCartItemsAfterAdd = [...state.cartItems, action.payload.cartItems]; 
-      const updatedCartDataAfterAdd = calculateTotalPrice(updatedCartItemsAfterAdd);
-      return {
-        ...state,
-        cartItems: updatedCartItemsAfterAdd,
-        cart: updatedCartDataAfterAdd,
-        loading: false,
-      };
-
     case GET_CART_SUCCESS:
-      console.log("Cart Data:", action.payload.cartItems);  // Log to verify
-      const fetchedCartData  = calculateTotalPrice(action.payload.cartItems);
+      const fetchedCartData = calculateTotalPrice(action.payload.cartItems);
       return {
         ...state,
         cartItems: action.payload.cartItems,
@@ -84,7 +73,6 @@ const cartReducer = (state = initialState, action) => {
         cart: updatedAfterRemove,
         loading: false,
       };
-
     case UPDATE_CART_ITEM_SUCCESS:
       const updatedCartItems = state.cartItems.map((item) =>
         item.id === action.payload.id ? action.payload : item
@@ -106,7 +94,6 @@ const cartReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload
       };
-
     default:
       return state;
   }

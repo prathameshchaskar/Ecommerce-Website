@@ -37,12 +37,20 @@ const Cart = () => {
       return <p>Your cart is empty</p>;
     }
     return (
+      <div>
+        {cart.cartItems && cart.cartItems.length > 0 ? (
+      
       <div className="lg:grid grid-cols-3 lg:px-16 relative">
         <div className="lg:col-span-2 lg:px-5 bg-white">
           <div className="space-y-3">
-            {cartItems.map((item) => (
+            {cart.cartItems.map((item) => 
+              item.product ? (
               <CartItem key={item.id} item={item} showButton={true} />
-            ))}
+            )
+            : (
+                  <div key={item.id}>Product data is missing</div>
+                )
+                )}
           </div>
         </div>
         <div className="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
@@ -51,12 +59,12 @@ const Cart = () => {
             <hr />
             <div className="space-y-3 font-semibold">
               <div className="flex justify-between pt-3 text-black">
-                <span>Price ({cart?.totalItem} item)</span>
-                <span>₹{cart?.totalPrice}</span>
+                <span>Price ({cart.cart?.totalItem} item)</span>
+                <span>₹{cart.cart?.totalPrice}</span>
               </div>
               <div className="flex justify-between">
                 <span>Discount</span>
-                <span className="text-green-700">-₹{cart?.discount}</span>
+                <span className="text-green-700">-₹{cart.cart?.discount}</span>
               </div>
               <div className="flex justify-between">
                 <span>Delivery Charges</span>
@@ -65,7 +73,7 @@ const Cart = () => {
               <hr />
               <div className="flex justify-between font-bold text-lg">
                 <span>Total Amount</span>
-                <span className="text-green-700">₹{cart?.totalDiscountedPrice}</span>
+                <span className="text-green-700">₹{cart.cart?.totalDiscountedPrice}</span>
               </div>
             </div>
             <Button
@@ -78,6 +86,11 @@ const Cart = () => {
           </div>
         </div>
       </div>
+    ) : (
+        <p>Your cart is empty</p>
+      )}
+    </div>
+
     );
   };
 
