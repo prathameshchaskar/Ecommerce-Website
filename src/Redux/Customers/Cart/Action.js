@@ -40,15 +40,11 @@ export const addItemToCart = (reqData) => async (dispatch) => {
       payload: data,
     });
 
-    // Fetch updated cart
-    console.log("Item added to cart, now fetching updated cart...");
-    const cartData = await dispatch(getCart(reqData.jwt)); // Wait for cart to be fetched
-    console.log("getCart dispatched and completed", cartData);
-
-    // Navigate to cart after ensuring the state is updated
-    dispatch(() => navigate("/cart"));
+    // Dispatch updated cart data to ensure the state is in sync
+    dispatch(getCart(reqData.jwt));
      
   } catch (error) {
+    console.error("Error adding item to cart", error);
     dispatch({
       type: ADD_ITEM_TO_CART_FAILURE,
       payload:
@@ -73,8 +69,9 @@ export const getCart = (jwt) => async (dispatch) => {
       type: GET_CART_SUCCESS,
       payload: data,
     });
-    console.log("get cart is dispatched");
+    
   } catch (error) {
+    console.error("Error fetching cart", error);
     dispatch({
       type: GET_CART_FAILURE, 
       payload:

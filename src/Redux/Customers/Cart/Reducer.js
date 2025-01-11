@@ -44,44 +44,25 @@ const calculateTotalPrice = (cartItems) => {
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ITEM_TO_CART_REQUEST:
-      return { ...state, loading: true, error: null };
-    case ADD_ITEM_TO_CART_SUCCESS:
-      const addedCartItems = [...state.cartItems, ...action.payload.cartItems];
-      const newCartData = calculateTotalPrice(addedCartItems);
-      return {
-        ...state,
-        cartItems: addedCartItems,
-        cart: newCartData,
-        loading: false,
-      };
-    case ADD_ITEM_TO_CART_FAILURE:
-      return { ...state, loading: false, error: action.payload };
     case GET_CART_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
-    case GET_CART_SUCCESS:
-      console.log('Cart data in reducer:', action.payload.cartItems); // Debugging log
-      const fetchedCartData = calculateTotalPrice(action.payload.cartItems);
-      return {
-        ...state,
-        cartItems: action.payload.cartItems,
-        cart: fetchedCartData,
-        loading: false,
-      };
-    case GET_CART_FAILURE:
-      return {
-        ...state,
-        error: action.payload,
-        loading: false,
-      };
     case REMOVE_CART_ITEM_REQUEST:
     case UPDATE_CART_ITEM_REQUEST:
       return {
         ...state,
         loading: true,
+        error: null
       };
+      
+    case ADD_ITEM_TO_CART_SUCCESS:
+    case GET_CART_SUCCESS:
+      const fetchedCartData  = calculateTotalPrice(action.payload.cartItems);
+      return {
+        ...state,
+        cartItems:action.payload.cartItems,
+        cart: fetchedCartData,
+        loading: false,
+      };
+
     case REMOVE_CART_ITEM_SUCCESS:
       const removedCartItems = state.cartItems.filter((item) => item.id !== action.payload);
       const updatedAfterRemove = calculateTotalPrice(removedCartItems);
@@ -102,12 +83,15 @@ const cartReducer = (state = initialState, action) => {
         cart: updatedAfterEdit,
         loading: false,
       };
+    
+    case ADD_ITEM_TO_CART_FAILURE:
+    case GET_CART_FAILURE:
     case REMOVE_CART_ITEM_FAILURE:
     case UPDATE_CART_ITEM_FAILURE:
       return {
         ...state,
-        error: action.payload,
         loading: false,
+        error: action.payload
       };
     default:
       return state;

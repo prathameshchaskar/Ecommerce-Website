@@ -5,7 +5,7 @@ import customerProductReducer from "./Customers/Product/Reducer";
 import cartReducer from "./Customers/Cart/Reducer";
 import { orderReducer } from "./Customers/Order/Reducer";
 import adminOrderReducer from "./Admin/Orders/Reducer";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 
 
 const rootReducers=combineReducers({

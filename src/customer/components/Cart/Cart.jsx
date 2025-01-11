@@ -9,9 +9,11 @@ const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
-  const { cart } = useSelector((store) => store);
+  const { cartItems, cart } = useSelector((store) => store.cart);
+  
+  console.log("cartItems:", cartItems);
   console.log("cart ", cart);
-
+  
   useEffect(() => {
     if (jwt) {
       console.log("Fetching cart items...");
@@ -29,11 +31,11 @@ const Cart = () => {
 
   return (
     <div>
-      {cart.cartItems && cart.cartItems.length > 0 ? (
+      {cartItems && cartItems.length > 0 ? (
         <div className="lg:grid grid-cols-3 lg:px-16 relative">
           <div className="lg:col-span-2 lg:px-5 bg-white">
             <div className="space-y-3">
-              {cart.cartItems.map((item) => (
+              {cartItems.map((item) => (
                 <CartItem key={item.id} item={item} showButton={true} />
               ))}
             </div>
@@ -44,13 +46,13 @@ const Cart = () => {
               <hr />
               <div className="space-y-3 font-semibold">
                 <div className="flex justify-between pt-3 text-black">
-                  <span>Price ({cart.cart?.totalItem} item)</span>
-                  <span>₹{cart.cart?.totalPrice}</span>
+                  <span>Price ({cart?.totalItem} item)</span>
+                  <span>₹{cart?.totalPrice}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Discount</span>
                   <span className="text-green-700">
-                    -₹{cart.cart?.discount}
+                    -₹{cart?.discount}
                   </span>
                 </div>
                 <div className="flex justify-between">
@@ -61,7 +63,7 @@ const Cart = () => {
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total Amount</span>
                   <span className="text-green-700">
-                    ₹{cart.cart?.totalDiscountedPrice}
+                    ₹{cart?.totalDiscountedPrice}
                   </span>
                 </div>
               </div>
